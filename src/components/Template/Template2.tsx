@@ -7,12 +7,13 @@ import Timer from '../Timer/Timer'
 interface Template2Props {
     expiredIn?: string;
     bgImage?: string;
+    img?: string;
 }
 
 export default function Template2({ expiredIn, bgImage }: Template2Props) {
     return (
         <div
-            className={classnames(shared.container, styles.container2)}
+            className={classnames(shared.container, styles.container2, { [shared.bgImage]: Boolean(bgImage) })}
             style={bgImage ? { backgroundImage: `url(${bgImage})` } : undefined}
         >
             <div className={styles.bottomWrap}>

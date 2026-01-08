@@ -6,12 +6,16 @@ import Timer from '../Timer/Timer'
 
 interface Template1Props {
     expiredIn?: string;
+    bgImage?: string;
     img?: string;
 }
 
-export default function Template1({ expiredIn, img }: Template1Props) {
+export default function Template1({ expiredIn, bgImage, img }: Template1Props) {
     return (
-        <div className={classnames(shared.container)}>
+        <div 
+            className={classnames(shared.container, { [shared.bgImage]: Boolean(bgImage) })}
+            style={bgImage ? { backgroundImage: `url(${bgImage})` } : undefined}
+        >
             <div className={styles.column}>
                 <div>
                     <h1 className={shared.title}>Enemy Attacks!</h1>
