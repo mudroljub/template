@@ -1,4 +1,4 @@
-import ships from '../../assets/ships.jpg'
+import classnames from 'classnames';
 import styles from './Template.module.css'
 import Timer from '../Timer/Timer'
 
@@ -6,9 +6,9 @@ interface Template1Props {
     expiredIn?: string;
 }
 
-export default function Template1({expiredIn}: Template1Props) {
+export default function Template1({ expiredIn }: Template1Props) {
     return (
-        <div className={styles.container}>
+        <div className={classnames(styles.container, styles.container1)}>
             <div className={styles.item}>
                 <div>
                     <h1 className={styles.title}>Enemy Attacks!</h1>
@@ -22,7 +22,7 @@ export default function Template1({expiredIn}: Template1Props) {
                 </div>
             </div>
             <div className={styles.item}>
-                <img src={ships} className={styles.img} alt="ships" />
+                <img src={'/assets/ships.jpg'} className={styles.img} alt="ships" />
             </div>
         </div>
     )

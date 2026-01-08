@@ -1,7 +1,21 @@
 .container {
     display: flex;
     gap: 80px;
+    padding: 4% 8%;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.container1 {
     min-height: 100vh;
+}
+
+.container2 {
+    max-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50vh;
 }
 
 /* .flex > *:not(:last-child) {
