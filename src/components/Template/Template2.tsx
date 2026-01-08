@@ -10,13 +10,18 @@ interface Template2Props {
     img?: string;
 }
 
-export default function Template2({ expiredIn, bgImage }: Template2Props) {
+export default function Template2({ expiredIn, img, bgImage }: Template2Props) {
     return (
         <div
             className={classnames(shared.container, styles.container2, { [shared.bgImage]: Boolean(bgImage) })}
             style={bgImage ? { backgroundImage: `url(${bgImage})` } : undefined}
         >
-            <div className={styles.bottomWrap}>
+            <div className={classnames(shared.imgWrapper)}>
+                {img &&
+                    <img src={img} className={shared.img} alt="ships" />
+                }
+            </div>
+            <div className={styles.flex}>
                 <div className={styles.column}>
                     <div>
                         <h1 className={shared.title}>Get new ships for secret manoeuvres battle type!</h1>

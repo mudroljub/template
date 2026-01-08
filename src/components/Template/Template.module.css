@@ -16,3 +16,11 @@
 .bgImage {
     background-size: cover;
 }
+
+.imgWrapper {
+    text-align: center;
+}
+
+.img {
+    max-width: 100%;
+}

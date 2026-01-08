@@ -28,9 +28,9 @@ export default function Template1({ expiredIn, bgImage, img }: Template1Props) {
                     <button>Read More</button>
                 </div>
             </div>
-            <div className={classnames(styles.column, styles.imgWrapper)}>
+            <div className={classnames(styles.column, shared.imgWrapper)}>
                 {img &&
-                    <img src={img} className={styles.img} alt="ships" />
+                    <img src={img} className={shared.img} alt="ships" />
                 }
             </div>
         </div>

@@ -1,8 +1,9 @@
 .container2 {
-    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
-.bottomWrap {
+.flex {
     display: flex;
 }
 
