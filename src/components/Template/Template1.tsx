@@ -21,8 +21,8 @@ export default function Template1({ expiredIn }: Template1Props) {
                     <button>Read More</button>
                 </div>
             </div>
-            <div className={styles.item}>
-                <img src={'/assets/ships.jpg'} className={styles.img} alt="ships" />
+            <div className={classnames(styles.item, styles.imgWrapper)}>
+                <img src={'/assets/present.png'} className={styles.img} alt="ships" />
             </div>
         </div>
     )
