@@ -1,5 +1,7 @@
 import classnames from 'classnames';
+
 import shared from './Template.module.css'
+import styles from './Template1.module.css'
 import Timer from '../Timer/Timer'
 
 interface Template1Props {
@@ -9,7 +11,7 @@ interface Template1Props {
 export default function Template1({ expiredIn }: Template1Props) {
     return (
         <div className={classnames(shared.container)}>
-            <div className={shared.item}>
+            <div className={styles.column}>
                 <div>
                     <h1 className={shared.title}>Enemy Attacks!</h1>
                     {expiredIn && <Timer expiredIn={expiredIn} />}
@@ -21,8 +23,8 @@ export default function Template1({ expiredIn }: Template1Props) {
                     <button>Read More</button>
                 </div>
             </div>
-            <div className={classnames(shared.item, shared.imgWrapper)}>
-                <img src={'/assets/present.png'} className={shared.img} alt="ships" />
+            <div className={classnames(styles.column, styles.imgWrapper)}>
+                <img src={'/assets/present.png'} className={styles.img} alt="ships" />
             </div>
         </div>
     )
