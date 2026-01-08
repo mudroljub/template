@@ -2,20 +2,16 @@
     display: flex;
     gap: 80px;
     padding: 4% 8%;
-    flex-shrink: 0;
-    flex-grow: 0;
 }
 
 .container1 {
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .container2 {
-    max-height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 100vh;
+    align-items: flex-end;
     background-size: cover;
-    padding-top: 50vh;
 }
 
 /* .flex > *:not(:last-child) {
@@ -24,7 +20,17 @@
 
 .item {
     flex: 1 1 0px;
-    width: 0;
+}
+
+.bottomWrap {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1 1 0px;
 }
 
 .img {
