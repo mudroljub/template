@@ -6,9 +6,10 @@ import Timer from '../Timer/Timer'
 
 interface Template1Props {
     expiredIn?: string;
+    img?: string;
 }
 
-export default function Template1({ expiredIn }: Template1Props) {
+export default function Template1({ expiredIn, img }: Template1Props) {
     return (
         <div className={classnames(shared.container)}>
             <div className={styles.column}>
@@ -24,7 +25,9 @@ export default function Template1({ expiredIn }: Template1Props) {
                 </div>
             </div>
             <div className={classnames(styles.column, styles.imgWrapper)}>
-                <img src={'/assets/present.png'} className={styles.img} alt="ships" />
+                {img &&
+                    <img src={img} className={styles.img} alt="ships" />
+                }
             </div>
         </div>
     )
