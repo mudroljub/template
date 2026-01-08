@@ -1,0 +1,15 @@
+.container2 {
+    align-items: flex-end;
+    background-size: cover;
+}
+
+.bottomWrap {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1 1 0px;
+}
