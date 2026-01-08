@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    gap: 80px;
+    min-height: 100vh;
+}
+
+/* .flex > *:not(:last-child) {
+    margin-right: 80px;
+} */
+
+.item {
+    flex: 1 1 0px;
+    width: 0;
+}
+
+.img {
+    max-width: 100%;
+}
+
+.title {
+    text-transform: uppercase;
+}

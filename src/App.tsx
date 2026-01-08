@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Timer from './components/Timer/Timer'
+import Template1 from './components/Template/Template1';
+import Template2 from './components/Template/Template2';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Template1 />
+      <Template1 expiredIn={new Date(Date.now() + 23 * 60 * 60 * 1000).toISOString()} />
+      <Template2 />
+
+      <h1>Timer test</h1>
+      <Timer expiredIn={new Date(2026, 2, 10).toISOString()} />
+      <Timer expiredIn={new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString()} />
+      <Timer expiredIn={new Date(Date.now() + 23 * 60 * 60 * 1000).toISOString()} />
+      <Timer expiredIn={new Date().toISOString()} />
     </div>
   );
 }
