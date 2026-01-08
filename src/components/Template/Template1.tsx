@@ -8,7 +8,7 @@ interface Template1Props {
 
 export default function Template1({ expiredIn }: Template1Props) {
     return (
-        <div className={classnames(styles.container, styles.container1)}>
+        <div className={classnames(styles.container)}>
             <div className={styles.item}>
                 <div>
                     <h1 className={styles.title}>Enemy Attacks!</h1>

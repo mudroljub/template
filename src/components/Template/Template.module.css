@@ -1,15 +1,11 @@
 .container {
     display: flex;
     gap: 80px;
+    height: 100vh;
     padding: 4% 8%;
 }
 
-.container1 {
-    height: 100vh;
-}
-
 .container2 {
-    height: 100vh;
     align-items: flex-end;
     background-size: cover;
 }
