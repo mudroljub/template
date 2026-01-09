@@ -17,14 +17,14 @@ function timeLeft(targetIso: string): string {
 }
 
 interface TimerProps {
-    expiredIn: string;
+    endDate: string;
 }
 
-export default function Timer({ expiredIn }: TimerProps) {
+export default function Timer({ endDate }: TimerProps) {
     return (
         <div>
             <div>Until end:</div>
-            <div className={styles.value}>{timeLeft(expiredIn)}</div>
+            <div className={styles.value}>{timeLeft(endDate)}</div>
         </div>
     )
 }

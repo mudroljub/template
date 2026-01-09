@@ -5,27 +5,27 @@ import styles from './Template2.module.css'
 import Timer from '../Timer/Timer'
 
 interface Template2Props {
-    expiredIn?: string;
+    endDate?: string;
     bgImage?: string;
-    img?: string;
+    image?: string;
 }
 
-export default function Template2({ expiredIn, img, bgImage }: Template2Props) {
+export default function Template2({ endDate, image, bgImage }: Template2Props) {
     return (
         <div
             className={classnames(shared.container, styles.container2, { [shared.bgImage]: Boolean(bgImage) })}
             style={bgImage ? { backgroundImage: `url(${bgImage})` } : undefined}
         >
             <div className={classnames(shared.imgWrapper)}>
-                {img &&
-                    <img src={img} className={shared.img} alt="ships" />
+                {image &&
+                    <img src={image} className={shared.img} alt="ships" />
                 }
             </div>
             <div className={styles.flex}>
                 <div className={styles.column}>
                     <div>
                         <h1 className={shared.title}>Get new ships for secret manoeuvres battle type!</h1>
-                        {expiredIn && <Timer expiredIn={expiredIn} />}
+                        {endDate && <Timer endDate={endDate} />}
                     </div>
                 </div>
                 <div className={styles.column}>
